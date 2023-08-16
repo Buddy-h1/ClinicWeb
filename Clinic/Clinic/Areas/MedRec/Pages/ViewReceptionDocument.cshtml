@@ -1,0 +1,97 @@
+﻿@page
+@model Clinic.Areas.MedRec.Pages.ViewReceptionDocumentModel
+@{
+    ViewData["Title"] = "Документы приема специалиста";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/base.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/medical-record/style.css" asp-append-version="true" />
+}
+
+
+<div class="container">
+    <div class="head-wrapper">
+        <div class="head-add-wrapper">
+            <h2 class="head">Приём пациентов</h2>
+            <a class="btn btn-add-plus">
+                <img class="icon-add" src="~/image/icon-add.png" width="12px">
+            </a>
+        </div>
+
+        <div class="head-filters">
+            <input type="date">
+            <select>
+                <option selected value="#">Поликлиника №1</option>
+            </select>
+            <select>
+                <option selected value="#">Все документы</option>
+            </select>
+            <select>
+                <option selected value="#">Только свои приёмы</option>
+                <option value="#">Все приёмы</option>
+            </select>
+            <input type="search">
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>№ карты</th>
+                    <th>Пациент</th>
+                    <th>Дата рождения</th>
+                    <th>Дистанц. (?)</th>
+                    <th>Статус</th>
+                    <th>Специалист</th>
+                    <th>Время</th>
+                    <th>Длительность</th>
+                    <th>Поликлиника</th>
+                    <th>Канал продаж</th>
+                    <th>Направил</th>
+                    <th>Место работы</th>
+                    <th>Таб. номер</th>
+                    <th>Комментарий</th>
+                    <th>Автор</th>
+                    <th class="th-td-last"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var recDoc in Model.AllReceptionDocuments)
+                {
+                    <tr>
+                        <td>@recDoc.RecDocId</td>
+                        <td></td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td class="th-td-last">
+                            <div class="btn-wrapper-table">
+                                <a class="btn btn-wrapper-table-box">
+                                    <img class="icon-add" src="~/image/icon-edit.png" width="16px">
+                                </a>
+                                <a class="btn btn-wrapper-table-box">
+                                    <img class="icon-add" src="~/image/icon-delete.png" width="16px">
+                                </a>
+                                <a class="btn btn-wrapper-table-text" asp-area="MedRec" asp-page="/CreateMedicalRecord" asp-route-RecDocId="@recDoc.RecDocId">Принять пациента</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            <tbody>
+
+
+        </table>
+    </div>
+</div>

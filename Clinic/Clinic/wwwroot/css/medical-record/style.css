@@ -1,0 +1,224 @@
+.head-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.head {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.063em;
+  color: rgb(46, 46, 46);
+}
+
+.head-add-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.only-my-reception {
+  display: flex;
+  align-items: center;
+}
+
+.btn-add-plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5em;
+  width: 2.3em;
+  height: 2.3em;
+  padding: 0;
+}
+
+/* Стиль таблицы */
+.table-wrapper {
+  box-shadow: 0em 0em 0.125em 0.063em rgba(0, 0, 0, 0.15);
+}
+
+.fl-table {
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+  display: block;
+  max-height: 55em;
+  overflow-y: auto;
+  overflow-x: scroll;
+  overflow: auto;
+}
+
+.th-td-last {
+  width: 100%;
+}
+
+.fl-table td, .fl-table th {
+  text-align: center;
+  padding: 1em;
+}
+
+.fl-table td {
+  border-right: 0.083em solid #f8f8f8;
+  font-size: 1em;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.fl-table thead th {
+  color: #ffffff;
+  background: #256e56;
+}
+
+.fl-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #3aac86;
+}
+
+.fl-table tr:nth-child(even) {
+  background: #F8F8F8;
+}
+
+tbody td:last-child {
+  position: sticky;
+  right: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.btn-wrapper-table {
+  display: flex;
+  gap: 0.7em;
+  justify-content: left;
+  align-items: center;
+}
+
+.btn-wrapper-table-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.3em;
+  height: 2.3em;
+  padding: 0;
+}
+
+.btn-wrapper-table-text {
+ font-size: 1.05em;
+}
+
+/* Стиль формы добавления/редактирования */
+.line {
+  height: 2px;
+  width: 100%;
+  background-color: black;
+}
+
+.wrapper-form-add {
+  background-color: white;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 80px;
+  width: 1000px;
+  box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+  padding: 15px;
+}
+
+.wrapper-add {
+  margin-top: 20px;
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(15, 45px);
+  grid-column-gap: 0px;
+  grid-row-gap: 5px;
+}
+
+.wrapper-add > label {
+  margin-right: 20px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.wrapper-add > input[type="checkbox"] {
+  height: 25px;
+  width: 25px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.wrapper-add > input {
+  font-size: 16px;
+  font-family: Helvetica;
+}
+
+.wrapper-add > select {
+  font-size: 16px;
+  font-family: Helvetica;
+}
+
+.wrapper-add > textarea {
+  padding-left: 5px;
+  resize: none;
+  font-size: 16px;
+  font-family: Helvetica;
+}
+
+.wrapper-add > input[type="text"] {
+  padding-left: 5px;
+}
+
+.wrapper-add > input[type="date"] {
+  padding-left: 5px;
+}
+
+.btn-add-submit {
+  margin-top: 20px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.btn-add-submit > button {
+  color: white;
+  background-color: #3aac86;
+}
+.btn-add-submit > button:hover {
+  background-color: #256e56;
+  color: white;
+}
+.btn-add-submit > button:active {
+  background-color: #1f5e49;
+  color: white;
+}
+
+a.btn-disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: rgb(163, 163, 163);
+  opacity: 20%;
+}
+
+.no-med-rec {
+  text-align: center;
+  margin-top: 150px;
+  font-size: 15px;
+}
